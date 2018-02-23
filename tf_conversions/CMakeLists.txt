@@ -17,7 +17,6 @@ if(NOT EIGEN3_INCLUDE_DIRS)
   set(EIGEN3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
 endif()
 
-
 catkin_python_setup()
 
 catkin_package(

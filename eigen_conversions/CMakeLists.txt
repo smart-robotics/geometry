@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(eigen_conversions)
 
 find_package(orocos_kdl REQUIRED)
+
 find_package(catkin REQUIRED cmake_modules geometry_msgs std_msgs)
 
 find_package(Eigen3 QUIET)
@@ -16,7 +17,6 @@ endif()
 if(NOT EIGEN3_INCLUDE_DIRS)
   set(EIGEN3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
 endif()
-
 
 include_directories(SYSTEM ${EIGEN3_INCLUDE_DIRS})
 include_directories(include ${catkin_INCLUDE_DIRS} ${orocos_kdl_INCLUDE_DIRS})
